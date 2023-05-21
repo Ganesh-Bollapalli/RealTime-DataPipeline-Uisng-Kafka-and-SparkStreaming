@@ -1,0 +1,16 @@
+https://github.com/SourabhSinghRana/real-time_crypto_data_pipeline_using_kafka
+
+https://github.com/kishlayjeet/Stock-Market-Real-Time-Data-Pipeline-with-Apache-Kafka-and-Cassandra
+(ABOVE LINK IS MAIN)
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+https://youtu.be/KerNf0NANMo
+
+https://youtu.be/wNnTNTVdglM
+
+
+Uing above 2 videos build realtime pipeline
+

@@ -1,0 +1,60 @@
+
+we can send data to topics using producer console or prducer Api
+similarly we can take data using consumer console or consumer Api
+
+we can send data from console using producer console or setting all the same used in producer-console in the procuder api which is intergared with jsp web application code
+we can see the output on console using consumer console or we can use consumer api to get it sparkstreaming
+
+CONSOLE used only for testing purpose and to see on screen and give from screen
+where as API are used to connect with sources to get data or consumer API are used to get data from broker and load data to nosql ( uslay written in scala or java )
+
+
+///////////////////////////////
+
+
+Web Application --> Kafka --> Spark Streaming --> cassandra
+*** kafka consumer is integrated with spark streaming
+kafka producer is intergrated with web application ***
+
+both producer and consumer are linked or common point is topic
+
+
+1) How web data is written to Topic ?????? [ producer api is linked to web application data ]
+
+ANS: 
+
+KafkaProducer<String, String> producer = new KafkaProducer<String, String>(kafkaProps);
+ProducerRecord<String, String> record = new ProducerRecord<>(topic, "web_data","web_data");
+producer.send(record);
+
+-- This creates topic names and adds data to it and we give all server details in props
+
+or
+
+we can write our manual data using producer-console
+
+
+2) How consumer takes data from broker ????????
+
+ANS:
+
+KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
+consumer.subscribe(Collections.singletonList("customerCountries"));
+ConsumerRecords<String, String> records = consumer.poll(100);
+System.out.println("topic = "+record.topic()+ "partition = "+record.partition()+ "offset = "+record.offset()+ "customer = "+record.key()+ "country = "+record.value());
+            
+-- This takes topic data to it and we give all server details in props
+
+or
+
+we can print data on console using consumer-console
+
+
+3) How Consumer gives topic data to spark streaming ??????? [ consumer api is linked with spark streaming api ]
+
+ANS:
+
+In spark streaming we use --packages to connect to kafka and kafkautils to get topics from kafka so automatically we will get all of our topics
+
+
+
