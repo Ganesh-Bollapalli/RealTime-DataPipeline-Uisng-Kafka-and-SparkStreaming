@@ -16,7 +16,7 @@ This project retrieves real-time web Activities data using kafka and stores it i
 
   Windows 11
   4 vCore, 4 GiB Memory, 32 GiB Storage
-AWS EC2:
+### AWS EC2:
 
   Amazon Linux 2 Kernel 5.10
   t2 Family, 1 vCore, 1 GiB Memory
@@ -30,7 +30,7 @@ AWS EC2:
 
 ## Project Implementation
 1. Launch EC2 instance and install Apache Kafka, Spark and Cassandra.
-2. Create a web application using jsp and configure Kafka producer API in it to retrieve real-time application data.
+2. Create a web application using jsp and integrate Kafka producer API in it to retrieve real-time application data.
 3. Use Apache Kafka to produce the data to a topic.
 4. Create a Spark Streaming script to consume topic data and store it in CassandraDB.
 
